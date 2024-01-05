@@ -13,7 +13,7 @@ This project is an implementation of the classic 8-puzzle game solver using AI t
 ### Installation
 1. Clone the repository to your local machine:
     ```
-    git clone https://github.com/yourusername/8-Puzzle-AI.git
+    git clone https://github.com/Lindrit14/8-Puzzle-AI.git
     ```
 
 2. Navigate to the project directory:
