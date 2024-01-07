@@ -1,0 +1,64 @@
+Timestamp: 2024-01-07 22:42:55
+---MANHATTAN---
+Total Time: 1.3646461963653564 seconds
+Total Nodes: 185208
+Mean Time: 0.013646461963653565 seconds
+Standard Deviation Time: 0.012935624227620037
+Mean Memory Usage: 22.64 Nodes
+Standard Deviation Memory Usage: 3.2427697352040825
+---HAMMING---
+Total Time: 16.655978202819824 seconds
+Total Nodes: 3003017
+Mean Time: 0.16655978202819824 seconds
+Standard Deviation Time: 0.24463950135293194
+Mean Memory Usage: 22.64 Nodes
+Standard Deviation Memory Usage: 3.2427697352040825
+
+Timestamp: 2024-01-07 22:44:07
+---MANHATTAN---
+Total Time: 1.4243762493133545 seconds
+Total Nodes: 185208
+Mean Time: 0.014243762493133545 seconds
+Standard Deviation Time: 0.013866444047427406
+Mean Memory Usage: 22.64 Nodes
+Standard Deviation Memory Usage: 3.2427697352040825
+---HAMMING---
+Total Time: 16.799479484558105 seconds
+Total Nodes: 3003017
+Mean Time: 0.16799479484558105 seconds
+Standard Deviation Time: 0.24606495777284595
+Mean Memory Usage: 22.64 Nodes
+Standard Deviation Memory Usage: 3.2427697352040825
+
+Timestamp: 2024-01-07 22:49:39
+---MANHATTAN---
+Total Time: 17.538533210754395 seconds
+Total Nodes: 2335943
+Mean Time: 0.017538533210754395 seconds
+Standard Deviation Time: 0.02080279678731098
+Mean Memory Usage: 23.114 Nodes
+Standard Deviation Memory Usage: 3.312397315536887
+---HAMMING---
+Total Time: 256.0713529586792 seconds
+Total Nodes: 40059666
+Mean Time: 0.2560713529586792 seconds
+Standard Deviation Time: 0.4295428391654946
+Mean Memory Usage: 23.114 Nodes
+Standard Deviation Memory Usage: 3.312397315536887
+
+Timestamp: 2024-01-07 22:50:51
+---MANHATTAN---
+Total Time: 1.7176434993743896 seconds
+Total Nodes: 223048
+Mean Time: 0.017176434993743897 seconds
+Standard Deviation Time: 0.019568669651899916
+Mean Memory Usage: 22.73 Nodes
+Standard Deviation Memory Usage: 3.653848116794958
+---HAMMING---
+Total Time: 22.834189653396606 seconds
+Total Nodes: 3723795
+Mean Time: 0.22834189653396605 seconds
+Standard Deviation Time: 0.3826199816185297
+Mean Memory Usage: 22.73 Nodes
+Standard Deviation Memory Usage: 3.653848116794958
+
