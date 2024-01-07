@@ -8,17 +8,49 @@ from gameLogic import display_puzzle
 import heapq
 class PuzzleState:
     def __init__(self, state, parent=None, action=None, cost=0 ):
+        """
+        Initialize a new puzzle state.
+
+        Parameters:
+        - state: The current state of the puzzle, typically represented as a list of lists.
+        - parent (optional): The preceding puzzle state from which this state was derived.
+        - action (optional): The move or action taken to reach the current state from the parent.
+        - cost (optional): The cumulative cost to reach this state from the initial state.
+
+        Each puzzle state represents a snapshot in the progression of solving the puzzle.
+        """
         self.state = state
         self.parent = parent
         self.action = action
         self.cost = cost 
         
     def __lt__(self, other):
+        """
+        Define the less-than operation for PuzzleState objects for ordering purposes.
+
+        Parameters:
+        - other: Another instance of PuzzleState to compare against.
+
+        Returns:
+        - boolean: Result of comparison between this state and the other state.
+
+        """
        
         return self.state < other.state
 
 
 def calculate_manhattan(state, goal_state):
+    """
+    Calculate the Manhattan distance between the current state and the goal state.
+
+    Parameters:
+    - state: The current state of the puzzle, typically a 3x3 matrix.
+    - goal_state: The desired goal state of the puzzle, also a 3x3 matrix.
+
+    Returns:
+    - distance: The total Manhattan distance of all tiles from their goal positions.
+
+    """
     distance = 0
     for i in range(3):  
         for j in range(3):
@@ -50,7 +82,16 @@ def calculate_hamming(state, goal_state):
     return distance
 
 def generate_moves(node):
-    """Generate all possible moves and their resulting states."""
+    """
+    Generate all possible moves and their resulting states from the given node.
+
+    Parameters:
+    - node: The current node or state of the puzzle from which to generate moves.
+
+    Returns:
+    - moves: A list of PuzzleState instances representing the states after each possible move.
+
+    """
     moves = []
     zero_position = next((ix, iy) for ix, row in enumerate(node.state) for iy, i in enumerate(row) if i == 0)
     x, y = zero_position
@@ -69,7 +110,16 @@ def generate_moves(node):
     return moves
 
 def reconstruct_path(end_node):
-    """Reconstruct the path from goal to start by following parent links."""
+    """
+    Reconstruct the path from the end node to the start node by following parent links.
+
+    Parameters:
+    - end_node: The final node or state of the puzzle after reaching the goal.
+
+    Returns:
+    - path: A list of states representing the sequence of moves from the start to the goal.
+
+    """
     path = []
     current_node = end_node
     while current_node is not None:
@@ -79,6 +129,18 @@ def reconstruct_path(end_node):
 
 
 def a_star(start, goal, heuristic):
+    """
+    Implement the A* search algorithm to find the shortest path from start to goal.
+
+    Parameters:
+    - start: The initial state of the puzzle.
+    - goal: The goal state of the puzzle.
+    - heuristic: A function that estimates the cost from the current state to the goal.
+
+    Returns:
+    - The sequence of states from the start to the goal, representing the solution path.
+
+    """
    
     total_nodes_generated = 0
 

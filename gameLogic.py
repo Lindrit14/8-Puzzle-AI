@@ -1,4 +1,3 @@
-import puzzleFunctions
 
 def move(puzzle, direction):
     """
@@ -47,6 +46,17 @@ def move(puzzle, direction):
 
 
 def display_puzzle(state):
+    """
+    Display the puzzle state in a human-readable format.
+
+    The function prints the puzzle to the console with each tile represented by its number.
+    The blank space (0) is typically displayed as it is for better readability.
+
+    Parameters:
+    - state (list of list of int): The puzzle state to display.
+
+  
+    """
     for row in state:
         print(' '.join(str(n) for n in row))
 

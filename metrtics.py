@@ -13,22 +13,37 @@ goal_state = [
     ]
 
 def read_puzzles(file_name):
+    """
+    Read puzzle configurations from a specified file and return them.
+
+    This function opens a file containing puzzle configurations in a JSON format,
+    reads the contents, and parses them into a Python object.
+
+    Parameters:
+    - file_name: The name or path of the file containing the puzzles.
+
+    Returns:
+    - puzzles: A list or dictionary of puzzles loaded from the file.
+    """
     with open(file_name, 'r') as file:
         puzzles = json.load(file)
     return puzzles
 
 def time_algorithm(algorithm, puzzles, heuristic):
     """
-    Time the algorithm over multiple puzzles and return various metrics.
+    Time the specified algorithm over multiple puzzles and return performance metrics.
+
+    This function runs the given algorithm with a specified heuristic on a collection of puzzles.
+    It measures the time taken for each puzzle and possibly other metrics like the number of moves or
+    memory usage.
 
     Parameters:
-    algorithm (function): The function to solve the puzzles, e.g., a_star.
-    puzzles (list): List of puzzles to solve.
-    heuristic (str): The heuristic to use ('manhattan' or 'hamming').
+    - algorithm: The algorithm to be timed, typically a function.
+    - puzzles: A collection of puzzles on which to run the algorithm.
+    - heuristic: The heuristic function to be used by the algorithm.
 
     Returns:
-    dict: Dictionary of metrics including total time, mean execution time, standard deviation of time,
-          total nodes generated, mean memory usage, and standard deviation of memory usage.
+    - A collection of metrics indicating the performance of the algorithm on the provided puzzles.
     """
     times = []
     moves_counts = []
